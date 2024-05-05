@@ -13,8 +13,6 @@ fn main() {
     // that from 0 to 100 including 0 and 100
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
-    println!("the secret number is:{secret_number}");
-
     loop {
         println!("Please input your guess.");
 
@@ -27,7 +25,7 @@ fn main() {
 
         // the parse method traform a string value to another type, rust can infer types
         // but in this case we need to tell rust what type we want because there are many
-        // possibilities 
+        // possibilities
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
